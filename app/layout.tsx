@@ -23,6 +23,7 @@ const mono = IBM_Plex_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
   title: "Pontual Relógios e Acessórios | Caruaru-PE",
   description:
     "Loja e assistência de relógios em Caruaru-PE. Automáticos, femininos, masculinos e digitais. Em todos os seus encontros, seja Pontual.",
