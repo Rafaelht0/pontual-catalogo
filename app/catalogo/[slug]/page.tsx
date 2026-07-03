@@ -23,6 +23,13 @@ function formatarPreco(preco?: number) {
   return preco.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
 }
 
+const rotulosFicha: Record<string, string> = {
+  mecanismo: "Mecanismo",
+  caixa: "Caixa",
+  pulseira: "Pulseira",
+  resistenciaAgua: "Resistência à água",
+};
+
 export default function ProdutoPage({ params }: { params: { slug: string } }) {
   const produto = produtos.find((p) => p.slug === params.slug);
   if (!produto) notFound();
@@ -51,7 +58,7 @@ export default function ProdutoPage({ params }: { params: { slug: string } }) {
             <dl className="mt-8 border-t border-carvao/10 divide-y divide-carvao/10 font-mono text-sm">
               {ficha.map(([chave, valor]) => (
                 <div key={chave} className="flex justify-between py-3">
-                  <dt className="capitalize text-aco">{chave}</dt>
+                  <dt className="text-aco">{rotulosFicha[chave] ?? chave}</dt>
                   <dd>{valor}</dd>
                 </div>
               ))}
