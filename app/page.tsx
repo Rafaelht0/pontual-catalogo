@@ -9,35 +9,41 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero — macro escuro, no espírito das fotos de lançamento da Pontual */}
-      <section className="relative bg-carvao text-osso overflow-hidden">
-        <div className="mx-auto max-w-6xl px-6 py-28 md:py-36 relative z-10">
+      {/* Hero — fotos reais dos relógios, crop dedicado pra desktop e mobile */}
+      <section className="relative bg-carvao text-osso overflow-hidden min-h-[560px] md:min-h-[640px]">
+        <Image
+          src="/banners/catalogo-mobile.png"
+          alt=""
+          fill
+          priority
+          className="object-cover object-[78%_center] md:hidden"
+        />
+        <Image
+          src="/banners/catalogo-desktop.png"
+          alt=""
+          fill
+          priority
+          className="hidden md:block object-cover object-[center_35%]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-carvao via-carvao/60 to-transparent" />
+        <div className="relative z-10 h-full mx-auto max-w-6xl px-6 py-28 md:py-36 flex flex-col justify-center [text-shadow:0_2px_8px_rgba(0,0,0,0.65)]">
           <p className="text-dourado text-xs uppercase tracking-wider2 mb-6">
             Caruaru-PE · Loja e assistência de relógios
           </p>
           <h1 className="font-display text-5xl md:text-7xl leading-[1.05] max-w-2xl">
             Em todos os seus encontros, seja Pontual.
           </h1>
-          <p className="mt-6 max-w-md text-osso/70 font-sans">
+          <p className="mt-6 max-w-[260px] md:max-w-md text-osso/80 font-sans">
             Relógios automáticos, femininos, masculinos e digitais. Peças que
             atravessam o tempo — e ficam na memória.
           </p>
           <Link
             href="/catalogo"
-            className="inline-block mt-10 border border-dourado text-dourado px-8 py-3 text-xs uppercase tracking-wider2 hover:bg-dourado hover:text-carvao transition-colors"
+            className="inline-block mt-10 border border-dourado text-dourado px-8 py-3 text-xs uppercase tracking-wider2 hover:bg-dourado hover:text-carvao transition-colors w-fit"
           >
             Ver catálogo completo
           </Link>
         </div>
-        {/* textura sutil de mostrador ao fundo */}
-        <div
-          aria-hidden
-          className="absolute -right-24 top-1/2 -translate-y-1/2 w-[420px] h-[420px] rounded-full border border-dourado/10"
-        />
-        <div
-          aria-hidden
-          className="absolute -right-24 top-1/2 -translate-y-1/2 w-[320px] h-[320px] rounded-full border border-dourado/20"
-        />
       </section>
 
       {/* Categorias — espelham os destaques reais do Instagram */}
