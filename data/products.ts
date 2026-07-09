@@ -26,7 +26,7 @@ export const produtos: Produto[] = [
     marca: "Orient",
     categoria: "automatico",
     preco: 1899,
-    imagens: ["/produtos/orient-special-calibers-1.jpg"],
+    imagens: ["/produtos/orient-special-calibers-1.png"],
     descricao:
       "Mostrador em algarismos romanos, pulseira em couro legítimo e movimento automático à vista nos ponteiros. Tradição da relojoaria com elegância atemporal.",
     ficha: {
@@ -59,7 +59,7 @@ export const produtos: Produto[] = [
     marca: "Orient",
     categoria: "masculino",
     preco: 1299,
-    imagens: ["/produtos/orient-solar-1.jpg"],
+    imagens: ["/produtos/orient-solartech-1.png"],
     descricao:
       "Tecnologia solar: sem preocupação com troca de bateria, com visual que impressiona em qualquer ocasião. Disponível em preto e azul.",
     ficha: {
@@ -76,7 +76,7 @@ export const produtos: Produto[] = [
     marca: "Champion",
     categoria: "feminino",
     preco: 899,
-    imagens: ["/produtos/champion-dourado-1.jpg"],
+    imagens: ["/produtos/champion-dourado-1.png"],
     descricao:
       "O presente perfeito: caixa dourada cravejada, mostrador madrepérola. Peça que marca os momentos que importam.",
     ficha: {
