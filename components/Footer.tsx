@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { linkWhatsappGenerico } from "@/lib/whatsapp";
 
 export default function Footer() {
@@ -5,8 +6,16 @@ export default function Footer() {
     <footer className="bg-carvao text-osso mt-24">
       <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 md:grid-cols-3">
         <div>
-          <p className="font-display text-2xl">Pontual</p>
-          <p className="text-osso/60 text-sm mt-2 italic font-display">
+          <div className="inline-block bg-osso rounded-sm px-4 py-3">
+            <Image
+              src="/marca/pontual-logo.png"
+              alt="Pontual Relógios e Acessórios"
+              width={1102}
+              height={604}
+              className="h-9 w-auto"
+            />
+          </div>
+          <p className="text-osso/60 text-sm mt-3 italic font-display">
             Em todos os seus encontros, seja Pontual.
           </p>
         </div>
