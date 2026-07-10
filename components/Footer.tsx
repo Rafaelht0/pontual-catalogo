@@ -6,15 +6,13 @@ export default function Footer() {
     <footer className="bg-carvao text-osso mt-24">
       <div className="mx-auto max-w-6xl px-6 py-14 grid gap-10 md:grid-cols-3">
         <div>
-          <div className="inline-block bg-osso rounded-sm px-4 py-3">
-            <Image
-              src="/marca/pontual-logo.png"
-              alt="Pontual Relógios e Acessórios"
-              width={1102}
-              height={604}
-              className="h-9 w-auto"
-            />
-          </div>
+          <Image
+            src="/marca/pontual-logo-dourado.png"
+            alt="Pontual Relógios e Acessórios"
+            width={894}
+            height={498}
+            className="h-11 w-auto"
+          />
           <p className="text-osso/60 text-sm mt-3 italic font-display">
             Em todos os seus encontros, seja Pontual.
           </p>
