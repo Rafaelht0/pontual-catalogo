@@ -95,7 +95,14 @@ export default function HomePage() {
               Saiba como funciona
             </Link>
           </div>
-          <div className="aspect-video bg-carvao rounded-sm border border-dourado/20" />
+          <div className="relative aspect-[4/5] md:aspect-square rounded-sm border border-dourado/20 overflow-hidden">
+            <Image
+              src="/servicos/revitalizacao-1.png"
+              alt="Processo de revitalização de relógio: antes, durante e depois"
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
     </>
