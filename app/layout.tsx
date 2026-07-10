@@ -22,8 +22,15 @@ const mono = IBM_Plex_Mono({
   variable: "--font-mono",
 });
 
+// Se NEXT_PUBLIC_SITE_URL não estiver setada, cai pra URL que a própria
+// Vercel injeta automaticamente no build (sem precisar configurar nada);
+// em domínio próprio, defina NEXT_PUBLIC_SITE_URL pra sobrescrever.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000"),
+  metadataBase: new URL(siteUrl),
   title: "Pontual Relógios e Acessórios | Caruaru-PE",
   description:
     "Loja e assistência de relógios em Caruaru-PE. Automáticos, femininos, masculinos e digitais. Em todos os seus encontros, seja Pontual.",
